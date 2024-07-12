@@ -3,15 +3,15 @@ $page = basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']);
 $page_index = ($page == basename(dirname($_SERVER['PHP_SELF']), "/") || $page == 'index.php');
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="th">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>ANCHAN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TAT สุขทันทีที่เที่ยวไทย</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta property="og:title" content="ANCHAN">
+    <meta property="og:title" content="TAT สุขทันทีที่เที่ยวไทย">
     <meta property="og:image" content="<?php echo $root; ?>assets/img/og.jpg">
     <meta property="og:type" content="website">
 
@@ -21,8 +21,8 @@ $page_index = ($page == basename(dirname($_SERVER['PHP_SELF']), "/") || $page ==
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $root; ?>assets/img/favicon/favicon-16x16.png">
     <link rel="manifest" href="<?php echo $root; ?>assets/img/favicon/site.webmanifest">
     <link rel="mask-icon" href="<?php echo $root; ?>assets/img/favicon/safari-pinned-tab.svg" color="#3C2631">
-    <meta name="msapplication-TileColor" content="#E0DAD0">
-    <meta name="theme-color" content="#E0DAD0">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- CSS:WP -->
     <link rel="stylesheet" href="<?php echo $root; ?>assets/css/_wp-css/blocks/style.min.css" type="text/css" media="all">
@@ -40,6 +40,7 @@ $page_index = ($page == basename(dirname($_SERVER['PHP_SELF']), "/") || $page ==
     <link rel="stylesheet" href="<?php echo $root; ?>assets/css/common/theme.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="<?php echo $root; ?>assets/css/common/theme-rwd.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="<?php echo $root; ?>assets/css/common/theme-wp.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="<?php echo $root; ?>assets/css/common/theme-default.css?v=<?php echo time(); ?>">
 
     <link rel="stylesheet" href="<?php echo $root; ?>assets/css/footer.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="<?php echo $root; ?>assets/css/header.css?v=<?php echo time(); ?>">
@@ -61,8 +62,13 @@ $page_index = ($page == basename(dirname($_SERVER['PHP_SELF']), "/") || $page ==
                             } ?>">
         <header id="header">
             <div class="header-nav">
+                <div class="header-logo">
+                    <a href="<?php echo $root; ?>index.php">
+                        <img src="<?php echo $root; ?>assets/img/logo.png" alt="TAT logo">
+                    </a>
+                </div>
 
-
-
+                <div class="header-menu">
+                </div>
             </div>
         </header>

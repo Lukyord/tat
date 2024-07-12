@@ -1,0 +1,189 @@
+/* A TAG */
+a:hover {
+  color: var(--color-pink-active);
+}
+
+.pink-hover:hover {
+  color: var(--color-pink-actice);
+}
+
+/* WAVE BG */
+.wave-bg {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.wave-bg.yellow-wave-bg-1 {
+  height: 70%;
+}
+
+.wave-bg .wave {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.wave-bg .wave > svg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.wave-bg .wave .bg {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.wave-bg .wave.yellow-wave .bg {
+  background-color: var(--color-light-yellow);
+}
+
+/* MASONRY GRID */
+.masonry-grid-section {
+  width: 100vw;
+  background-color: var(--color-cream);
+  margin-top: calc(-1 * var(--spacing-2xl));
+  padding-bottom: var(--spacing-5xl);
+  position: relative;
+}
+
+.masonry-grid {
+  z-index: 1;
+}
+
+.masonry-grid .masonry-grid-item-sizer {
+  width: 31vw;
+}
+
+.masonry-grid .masonry-grid-gutter-sizer {
+  width: 3.5vw;
+}
+
+.masonry-grid .masonry-grid-item {
+  width: 31vw;
+  margin-bottom: var(--spacing-2xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.masonry-grid .masonry-grid-item:nth-child(4) {
+  margin-top: var(--spacing-2xl);
+}
+
+.masonry-grid .masonry-grid-item .item-image > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.8);
+  transition: 0.8s ease-in-out;
+}
+
+.masonry-grid .masonry-grid-item:hover .item-image > img {
+  transform: scale(1.05);
+}
+
+.masonry-grid .masonry-grid-item .item-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  grid-gap: var(--spacing-md);
+  -webkit-text-stroke: 1px var(--color-pink, #ed2891);
+  color: var(--color-yellow);
+  text-align: center;
+  font-weight: 700;
+  text-wrap: nowrap;
+}
+
+.masonry-grid .masonry-grid-item .item-text.top {
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.masonry-grid .masonry-grid-item .item-pin {
+  position: absolute;
+  bottom: var(--spacing-xs);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.masonry-grid .masonry-grid-item .item-pin > img {
+  width: 58px;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  transform-origin: bottom;
+}
+
+.masonry-grid .masonry-grid-item .item-button {
+  position: absolute;
+  bottom: var(--spacing-xl);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.masonry-grid .masonry-grid-item:hover .item-button .button.button-cta {
+  background-color: rgba(var(--color-white-rgb), 1) !important;
+}
+
+.masonry-grid-section .masonry-grid-button {
+  margin-top: var(--spacing-3xl);
+}
+
+@media (max-width: 1200px) {
+  .masonry-grid-section {
+    margin-top: unset;
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-4xl);
+  }
+
+  .masonry-grid .masonry-grid-item-sizer {
+    width: 47.5vw;
+  }
+
+  .masonry-grid .masonry-grid-gutter-sizer {
+    width: 5vw;
+  }
+
+  .masonry-grid .masonry-grid-item {
+    width: 47.5vw;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .masonry-grid .masonry-grid-item:nth-child(4) {
+    margin-top: unset;
+  }
+
+  .masonry-grid .masonry-grid-item .item-text {
+    grid-gap: var(--spacing-xs);
+  }
+}
+
+@media (max-width: 767px) {
+  .masonry-grid .masonry-grid-item-sizer {
+    width: 91vw;
+  }
+
+  .masonry-grid .masonry-grid-gutter-sizer {
+    width: 0;
+  }
+
+  .masonry-grid .masonry-grid-item {
+    width: 91vw;
+    margin-bottom: var(--spacing-2xs);
+    margin-left: 4.5vw;
+  }
+
+  .masonry-grid-section .masonry-grid-button {
+    margin-top: var(--spacing-xl);
+  }
+}
