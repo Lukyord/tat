@@ -3331,12 +3331,12 @@ img.mfp-img {
   animation-delay: 0.1s;
 }
 
-.animate.bounce {
+.bounce {
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
   -webkit-animation-timing-function: var(--timing-function-bounce);
   animation-timing-function: var(--timing-function-bounce);
-  will-change: transform;
+  will-change: opacity, transform;
 }
 
 @-webkit-keyframes fadeInUp {

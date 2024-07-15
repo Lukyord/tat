@@ -46,8 +46,8 @@ jQuery(function ($) {
         if (!$("html").hasClass("overflow-hidden")) {
           path.addClass("in-view");
           pin.addClass("in-view");
-          heroPin.addClass("animate bounce fadeInBounce");
-          heroVector.addClass("animate bounce fadeInBounceTranslateX");
+          heroPin.addClass("bounce fadeInBounce");
+          heroVector.addClass("bounce fadeInBounceTranslateX");
           clearInterval(timer);
         }
       }, 100);
@@ -86,8 +86,8 @@ jQuery(function ($) {
 
 // ANIMATE PIN INFINITELY WHEN HOVERED AND BACK TO 0 SMOOTHLY WHEN UNHOVERED
 jQuery(function ($) {
-  if ($("#province-masonry-grid .masonry-grid-item").length) {
-    $("#province-masonry-grid .masonry-grid-item").each(function () {
+  if ($(".masonry-grid .masonry-grid-item").length) {
+    $(".masonry-grid .masonry-grid-item").each(function () {
       var _this = $(this);
       var itemPin = _this.find(".item-pin > img");
       var isHovered = false;
